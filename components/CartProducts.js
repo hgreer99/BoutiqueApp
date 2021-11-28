@@ -2,19 +2,16 @@ import React, { Component } from "react";
 import {
     View,
     StyleSheet,
-    Pressable
 } from "react-native";
-import ProductItem from "./ProductItem";
+import CartProductItem from "./CartProductItem";
 
-class Products extends Component {
+class CartProducts extends Component {
 
     renderProducts = (products) => {                
         return products.map((item, index) => {
             return (
                 <View key={index}>
-                    <Pressable onPress={()=> this.props.navigation.navigate('ItemScreen', {item: item, addToCartAction:() => this.props.addToCartAction(item)})}>
-                        <ProductItem product={item} addToCartAction={() => this.props.addToCartAction(item)}/>
-                    </Pressable>
+                    <CartProductItem product={item} removeFromCartAction={() => this.props.removeFromCartAction(item)}/>
                 </View>
             )
         })
@@ -28,7 +25,7 @@ class Products extends Component {
         );
     }
 }
-export default Products;
+export default CartProducts;
 
 const styles = StyleSheet.create({
     itemsContainer: {

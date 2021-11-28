@@ -8,16 +8,16 @@ const ShoppingCartIcon = (props) => (
     <Pressable
         onPress={() => props.navigation.navigate('Cart')}
         style={({ pressed }) => ({
-        opacity: pressed ? 0.5 : 1,
+            opacity: pressed ? 0.5 : 1,
         })}>
 
         <View style={styles.numItems}>
            <Text style={{ color: 'white', fontWeight: 'bold'}}>{props.cartItems.length}</Text>
         </View>
         <Feather
-        name="shopping-bag"
-        size={25}
-        style={{ marginRight: 15 }}
+            name="shopping-bag"
+            size={25}
+            style={{ marginRight: 15 }}
         />
     </Pressable>
 )
