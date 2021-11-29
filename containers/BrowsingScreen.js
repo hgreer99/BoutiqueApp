@@ -5,9 +5,9 @@ import { shoppingItems } from "../Data";
 import { connect } from "react-redux";
 
 class BrowsingScreen extends Component {
-    static navigationOptions = {
-        headerTitle: 'Browsing Cool'
-    }
+    // static navigationOptions = {
+    //     headerTitle: 'Browsing Cool'
+    // }
 
     render(){
         return (

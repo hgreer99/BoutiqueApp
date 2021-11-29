@@ -17,7 +17,6 @@ class ProductItem extends Component {
                 <Text style={styles.title}>{myItem.title}</Text>
                 <Text>${myItem.price}</Text>
                 <Text>{myItem.store}</Text>
-                <Button onPress={() => this.props.addToCartAction(myItem)} title="QuickAdd"/>
             </View>
         );
     }

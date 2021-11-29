@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, ScrollView, Image, Pressable, Text } from 'react-native';
+import { StyleSheet, ScrollView, Image, Pressable, Text, View } from 'react-native';
 
 class ItemScreen extends Component {
     render() {
@@ -11,8 +11,11 @@ class ItemScreen extends Component {
             <ScrollView>
                 <Text style={styles.title}>{item.title}</Text>
                 <Image style={styles.image} source={{uri: item.image}} />
-                <Text>${item.price}</Text>
-                <Text>{item.store}</Text>
+                <View style={styles.itemDescriptionText}>
+                    <Text style={styles.text}>${item.price}</Text>
+                    <Text style={styles.text}>This would be a description on sizing or whatever they like here</Text>
+                    <Text style={styles.text}>{item.store}</Text>
+                </View>
                 <Pressable
                     onPress={() => addToCartAction(item)}
                     style={styles.addToCart}>
@@ -34,14 +37,25 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     title: {
-        fontSize: 16,
+        fontSize: 20,
         textAlign: 'center',
+        margin: 10
+    },
+    itemDescriptionText: {
+        fontSize: 18,
+        marginLeft: 10,
+        marginBottom: 60
+    },
+    text: {
+        fontSize: 18,
     },
     addToCart: {
+        position: 'absolute',
+        right: 10,
+        bottom: 10,
         alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: 12,
-        // paddingHorizontal: 32,
         borderRadius: 4,
         elevation: 3,
         backgroundColor: '#1E447D',
