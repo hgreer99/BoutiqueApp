@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         borderRadius: 4,
         elevation: 3,
-        backgroundColor: '#1E447D',
+        backgroundColor: 'rgb(49, 151, 173)',
         width: 120,
     },
     addToCartText: {

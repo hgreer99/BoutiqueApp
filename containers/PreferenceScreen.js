@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     height: 40,
     paddingHorizontal: 10,
     borderRadius: 50,
-    backgroundColor: '#b9e4c9',
+    backgroundColor: 'rgba(129, 216, 235,.8)',
   },
   groupInput: {
       display: 'flex',
@@ -110,6 +110,6 @@ const styles = StyleSheet.create({
     height: 40,
     paddingHorizontal: 10,
     borderRadius: 50,
-    backgroundColor: '#b9e4c9',
+    backgroundColor: 'rgba(129, 216, 235,.8)',
   }
 });

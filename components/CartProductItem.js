@@ -23,9 +23,7 @@ class CartProductItem extends Component {
                 </View>
                 <Pressable
                     onPress={() => this.props.removeFromCartAction(myItem)}
-                    style={({ pressed }) => ({
-                        opacity: pressed ? 0.5 : 1,
-                    })}>
+                    style={styles.trash}>
                     <Feather
                         name="trash-2"
                         size={25}
@@ -57,5 +55,10 @@ const styles = StyleSheet.create({
     cartText: {
         display: 'flex',
         flexDirection: 'column'
+    },
+    trash: {
+        position: 'absolute',
+        right: 0,
+        bottom: 5,
     }
 });
