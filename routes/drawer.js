@@ -9,7 +9,7 @@ const RootDrawerNavigator = createDrawerNavigator({
     },
     Preferences: {
         screen: PreferencesStack,
-    }
+    },
 });
 
 export default createAppContainer(RootDrawerNavigator);
