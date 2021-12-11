@@ -7,19 +7,29 @@ import HamburgerIcon from "../containers/HamburgerIcon";
 import ItemScreen from "../containers/ItemScreen";
 import ShoppingCartIcon from "../containers/ShoppingCartIcon";
 import WelcomeScreen from "../containers/WelcomeScreen";
+import WelcomeDefaultScreen from "../containers/WelcomeDefaultScreen";
 
 const HomeStack = createStackNavigator({
-    Browse: {
-        screen: BrowsingScreen
-    },
     Welcome: {
-        screen: WelcomeScreen
+        screen: WelcomeScreen,
+        navigationOptions: {
+            headerShown: false,
+        }
+    },
+    WelcomeDefault: {
+        screen: WelcomeDefaultScreen,
+        navigationOptions: {
+            headerShown: false,
+        }
+    },
+    Browse: {
+        screen: BrowsingScreen,
     },
     Cart: {
-        screen: CartScreen
+        screen: CartScreen,
     },
     ItemScreen: {
-        screen: ItemScreen
+        screen: ItemScreen,
     }
 }, {
     defaultNavigationOptions: {

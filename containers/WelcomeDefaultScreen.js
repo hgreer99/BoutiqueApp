@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Button, Text } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import BoutiqueOptions from "../components/BoutiqueOptions";
 
-class WelcomeScreen extends Component {
+class WelcomeDefaultScreen extends Component {
     render(){
         return (
             <KeyboardAwareScrollView 
@@ -11,17 +10,15 @@ class WelcomeScreen extends Component {
                 contentContainerStyle={styles.container}
                 scrollEnabled={false}
             >
-                <Text style={styles.textBox}>Welcome!</Text>
-                <Text style={styles.textBox}>To get started, enter a few of your favorite boutiques to shop at below:</Text>
-                <BoutiqueOptions style={styles.textBox}/>
+                <Text style={styles.textBox}>Would you like to view items even when they are out of stock?</Text>
                 <View style={styles.skipButton}>
-                    <Button style={styles.skip} title="Skip" onPress={()=>this.props.navigation.navigate('WelcomeDefault')}/>
+                    <Button style={styles.skip} title="Skip" onPress={()=>this.props.navigation.navigate('Browse')}/>
                 </View>
             </KeyboardAwareScrollView>
         );
     }
 }
-export default WelcomeScreen;
+export default WelcomeDefaultScreen;
 
 const styles = StyleSheet.create({
     container:{
