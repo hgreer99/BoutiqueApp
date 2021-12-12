@@ -3,7 +3,6 @@ import {
     View,
     Text,
     StyleSheet,
-    Button,
     Pressable
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";

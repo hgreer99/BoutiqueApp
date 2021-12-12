@@ -14,6 +14,9 @@ class WelcomeScreen extends Component {
                 <Text style={styles.textBox}>Welcome!</Text>
                 <Text style={styles.textBox}>To get started, enter a few of your favorite boutiques to shop at below:</Text>
                 <BoutiqueOptions style={styles.textBox}/>
+                <View style={styles.continueButton}>
+                    <Button style={styles.continue} title="Continue" onPress={()=>this.props.navigation.navigate('WelcomeDefault')}/>
+                </View>
                 <View style={styles.skipButton}>
                     <Button style={styles.skip} title="Skip" onPress={()=>this.props.navigation.navigate('WelcomeDefault')}/>
                 </View>
@@ -37,6 +40,13 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         marginTop: 15,
     }, 
+    continueButton:{
+        position: 'absolute',
+        bottom: 65,
+        right: 20,
+        backgroundColor: 'white',
+        borderRadius: 5,
+    },
     skipButton:{
         position: 'absolute',
         bottom: 20,
