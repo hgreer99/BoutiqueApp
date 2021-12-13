@@ -53,5 +53,5 @@ const styles = StyleSheet.create({
         right: 20,
         backgroundColor: 'white',
         borderRadius: 5,
-    }
+    },
 })

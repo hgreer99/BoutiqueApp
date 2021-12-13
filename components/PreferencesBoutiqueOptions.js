@@ -8,7 +8,9 @@ import {
 } from "react-native";
 import { Feather } from '@expo/vector-icons';
 
-class BoutiqueOptions extends Component {
+//TODO: this is terrible duplication, make the styles be passed down
+
+class PreferencesBoutiqueOptions extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -32,7 +34,7 @@ class BoutiqueOptions extends Component {
                                 name="delete"
                                 size={25}
                                 style={{ marginRight: 15 }}
-                                color='white'
+                                color='rgb(17, 112, 133)'
                             />
                         </Pressable>
                     </View>
@@ -82,7 +84,7 @@ class BoutiqueOptions extends Component {
         );
     }
 }
-export default BoutiqueOptions;
+export default PreferencesBoutiqueOptions;
 
 const styles = StyleSheet.create({
     container:{
@@ -97,19 +99,19 @@ const styles = StyleSheet.create({
         height: 40,
         paddingHorizontal: 10,
         borderRadius: 50,
-        backgroundColor: 'white',
+        backgroundColor: 'rgba(129, 216, 235,.8)',
     },
     storeItem: {
         width: 250,
     },
     text: {
-        color: 'white',
+        color: 'rgb(17, 112, 133)',
         fontSize: 20,
         alignSelf: 'center'
     },
     delete: {
         position: 'absolute',
         right: 0,
-        bottom: 0,
+        bottom: 0
     }
 });

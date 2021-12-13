@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import PreferencesBoutiqueOptions from "../components/PreferencesBoutiqueOptions";
 
 class PreferenceScreen extends Component {
+    constructor(props) {
+        super(props);
+        // todo: this is hardcoded instead of saved where it should be
+        this.state = {
+          stores: ["shopStevie.com", "lucyAvenue.com"],
+        };
+    }
+
     render(){
         return (
             <ScrollView contentContainerStyle={styles.container}>
@@ -71,7 +80,10 @@ class PreferenceScreen extends Component {
                         />
                     </View>
                 </View>
-                <Text style={styles.title}>Preferences</Text>
+                <View>
+                    <Text style={styles.title}>Edit shops</Text>
+                    <PreferencesBoutiqueOptions style={styles.textBox} stores={this.state.stores}/>
+                </View>
             </ScrollView>
         );
     }
@@ -83,8 +95,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
+    textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
+    paddingVertical: 10
   },
   separator: {
     marginVertical: 30,
@@ -111,5 +125,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     borderRadius: 50,
     backgroundColor: 'rgba(129, 216, 235,.8)',
-  }
+  },
+  textBox:{
+    fontSize: 20,
+    width: 300,
+    marginBottom: 15,
+    marginTop: 15,
+  },
 });

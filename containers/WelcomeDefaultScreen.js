@@ -32,13 +32,9 @@ class WelcomeDefaultScreen extends Component {
                         onValueChange={toggleSwitch}
                         value={this.isEnabled}
                     />
-
                 </View>
                 <View style={styles.continueButton}>
                     <Button style={styles.continue} title="Begin Shopping" onPress={()=>this.props.navigation.navigate('Browse')}/>
-                </View>
-                <View style={styles.skipButton}>
-                    <Button style={styles.skip} title="Skip" onPress={()=>this.props.navigation.navigate('Browse')}/>
                 </View>
             </KeyboardAwareScrollView>
         );
@@ -62,26 +58,13 @@ const styles = StyleSheet.create({
     }, 
     continueButton:{
         position: 'absolute',
-        bottom: 65,
-        right: 20,
-        backgroundColor: 'white',
-        borderRadius: 5,
-    },
-    skipButton:{
-        position: 'absolute',
         bottom: 20,
         right: 20,
         backgroundColor: 'white',
         borderRadius: 5,
     },
-    // toggle: {
-    //     display: 'flex',
-    //     flexDirection: 'row',
-    //     alignItems: 'center'
-    // },
     switch: {
         position: 'relative',
-        // bottom: -15,
         left: 200,
         top: -40
     }
