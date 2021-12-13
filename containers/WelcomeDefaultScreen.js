@@ -35,7 +35,7 @@ class WelcomeDefaultScreen extends Component {
 
                 </View>
                 <View style={styles.continueButton}>
-                    <Button style={styles.continue} title="Continue" onPress={()=>this.props.navigation.navigate('Browse')}/>
+                    <Button style={styles.continue} title="Begin Shopping" onPress={()=>this.props.navigation.navigate('Browse')}/>
                 </View>
                 <View style={styles.skipButton}>
                     <Button style={styles.skip} title="Skip" onPress={()=>this.props.navigation.navigate('Browse')}/>

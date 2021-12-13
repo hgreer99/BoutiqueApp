@@ -52,6 +52,17 @@ export const shoppingItems = [
         {"id": "50", "title": "The Splendid Turtleneck", "price": 38, "store": "Roolee", "category": "","image": "https://cdn.shopify.com/s/files/1/1734/4153/products/5G0A0801_333x500.jpg?v=1629740178"}
 ]
 
+export const blueSearch = [
+    {"id": "1", "title": "Myrna Midi Dress", "price": 68, "store": "shopStevie", "category": "dress", "image": "https://cdn.shopify.com/s/files/1/0322/1058/3685/products/8386_1200x.jpg?v=1634660015"},
+    {"id": "3", "title": "Sienna Sweater Dress", "price": 64, "store": "shopStevie", "image": "https://cdn.shopify.com/s/files/1/0322/1058/3685/products/8493_600x.jpg?v=1636672870"},
+    {"id": "11", "title": "Cera Polka Dot Dress", "price": 68, "store": "shopStevie", "category": "","image": "https://cdn.shopify.com/s/files/1/0322/1058/3685/products/8381a_600x.jpg?v=1636413557"},
+    {"id": "24", "title": "Shaylee Ribbed Midi Dress", "price": 34, "store": "shopStevie", "category": "","image": "https://cdn.shopify.com/s/files/1/0322/1058/3685/products/8469_600x.jpg?v=1636045376"},
+    {"id": "26", "title": "Taylor Jane Wrap Maxi", "price": 44, "store": "Roolee", "category": "","image": "https://cdn.shopify.com/s/files/1/1734/4153/products/6Z8A1848-2_333x500.jpg?v=1635267662"},
+    {"id": "39", "title": "As the Leaves Turn Midi", "price": 52, "store": "Roolee", "category": "","image": "https://cdn.shopify.com/s/files/1/1734/4153/products/5G0A4366_333x500.jpg?v=1632257916"},
+    {"id": "44", "title": "Fiora Ruffle Maxi", "price": 64, "store": "Roolee", "category": "","image": "https://cdn.shopify.com/s/files/1/1734/4153/products/B48I1552_7e3327e6-c4e6-4f3f-8323-27085ace2778_333x500.jpg?v=1626990892"},
+    {"id": "46", "title": "Orchard Lavish Dress", "price": 58, "store": "Roolee", "category": "","image": "https://cdn.shopify.com/s/files/1/1734/4153/products/5G0A7827_333x500.jpg?v=1632340133"},
+]
+
 
 export const shoppingItemsNotStrings = [
     {id: "1", "title": "Myrna Midi Dress", "price": 68, "store": "shopStevie", "category": "dress", "image": "https://cdn.shopify.com/s/files/1/0322/1058/3685/products/8386_1200x.jpg?v=1634660015"},
