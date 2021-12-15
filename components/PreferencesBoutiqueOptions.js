@@ -77,7 +77,7 @@ class PreferencesBoutiqueOptions extends Component {
                         style={styles.formInput} 
                         onChangeText={(val) => {this.state.lastStore = val}} 
                         onSubmitEditing={() => this.addStore()}
-                        placeholder="store" 
+                        placeholder="Search" 
                     />
                 </View>
             </View>
@@ -96,10 +96,11 @@ const styles = StyleSheet.create({
     formInput: {
         marginTop: 10,
         width: 300,
-        height: 40,
+        height: 35,
         paddingHorizontal: 10,
         borderRadius: 50,
         backgroundColor: 'rgba(129, 216, 235,.8)',
+        alignSelf: 'center'
     },
     storeItem: {
         width: 250,

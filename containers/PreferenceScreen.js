@@ -16,7 +16,6 @@ class PreferenceScreen extends Component {
             <ScrollView contentContainerStyle={styles.container}>
                 <Text style={styles.title}>Account Info</Text>
                 <Text>This information can be configured here, or upon your first purchase.</Text>
-                <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
                 <Text style={styles.title}>Preferred Shipping Address</Text>
                 <View>
                     <View style={styles.groupInput}>
@@ -82,8 +81,10 @@ class PreferenceScreen extends Component {
                 </View>
                 <View>
                     <Text style={styles.title}>Edit shops</Text>
+                    <Text>These are the shops you will be able to browse and search</Text>
                     <PreferencesBoutiqueOptions style={styles.textBox} stores={this.state.stores}/>
                 </View>
+                <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             </ScrollView>
         );
     }
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
-    paddingVertical: 10
+    paddingVertical: 15
   },
   separator: {
     marginVertical: 30,
@@ -108,7 +109,7 @@ const styles = StyleSheet.create({
   formInput: {
     marginTop: 10,
     width: 300,
-    height: 40,
+    height: 35,
     paddingHorizontal: 10,
     borderRadius: 50,
     backgroundColor: 'rgba(129, 216, 235,.8)',
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
   groupFormInput: {
     marginTop: 10,
     width: 145,
-    height: 40,
+    height: 35,
     paddingHorizontal: 10,
     borderRadius: 50,
     backgroundColor: 'rgba(129, 216, 235,.8)',
