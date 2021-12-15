@@ -26,8 +26,10 @@ class WelcomeDefaultScreen extends Component {
                     <Text style={styles.textBox}>Show out of stock:</Text>
                     <Switch
                         style={styles.switch}
-                        trackColor={{ false: "rgb(45, 123, 150)", true: "rgb(45, 123, 150)" }}
-                        thumbColor={this.isEnabled ? "rgb(227, 244, 250)" : "#f4f3f4"}
+                        // trackColor={{ false: "rgb(45, 123, 150)", true: "rgb(45, 123, 150)" }}
+                        // thumbColor={this.isEnabled ? "rgb(227, 244, 250)" : "#f4f3f4"}
+                        trackColor={{ false: "rgb(45, 123, 150)", true: "rgb(182, 241, 252)" }}
+                        thumbColor={this.isEnabled ? "#f4f3f4" : "#f4f3f4"}
                         ios_backgroundColor="#3e3e3e"
                         onValueChange={toggleSwitch}
                         value={this.isEnabled}
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor: 'rgb(79, 188, 227)'
+        backgroundColor: 'rgb(105,188,206)'
     },
     textBox:{
         color: 'white',

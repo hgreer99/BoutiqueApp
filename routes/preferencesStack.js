@@ -13,9 +13,9 @@ const PreferencesStack = createStackNavigator({
     },
 }, {
     defaultNavigationOptions: {
-        headerTitle: 'Shopping App',
+        headerTitle: 'Boutique Shopper',
         headerStyle: {
-            backgroundColor: '#eee',
+            backgroundColor: 'rgb(105,188,206)',
             height: 60
         },
         headerRight:(()=>

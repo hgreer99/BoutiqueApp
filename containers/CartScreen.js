@@ -18,10 +18,7 @@ class CartScreen extends Component {
         });
         return (
             <ScrollView contentContainerStyle={styles.container}>
-                <View style={styles.container}>
-                    <Text style={styles.title}>Shopping Cart</Text>
-                    <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-                </View>
+                <Text style={styles.title}>Shopping Cart</Text>
                 {this.props.cartItems.length > 0 ?
                     <CartProducts
                         removeFromCartAction={this.props.removeItem}
@@ -62,6 +59,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: 'bold',
+        marginVertical: 15
     },
     total: {
         fontSize: 20,
@@ -77,7 +75,7 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         borderRadius: 4,
         elevation: 3,
-        backgroundColor: '#1E447D',
+        backgroundColor: 'rgb(49, 151, 173)',
         width: 120,
     },
     checkoutButtonText: {

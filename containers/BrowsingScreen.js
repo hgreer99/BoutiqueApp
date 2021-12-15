@@ -21,7 +21,7 @@ class BrowsingScreen extends Component {
 
     getTitle = () => {
         if (this.state.search == "") {
-            return "Happy Browsing";
+            return "";
         } else {
             this.state.displayItems = blueSearch;
             return this.state.displayItems.length + " results for: " + this.state.search;
@@ -31,8 +31,9 @@ class BrowsingScreen extends Component {
     render(){
         return (
             <ScrollView>
+                {/* TODO: layout is jank */}
                 <View style={styles.container}>
-                    <Text style={styles.title}>{this.getTitle()}</Text>
+                    <Text style={styles.title}>Happy Browsing:)</Text>
                     <View>
                         <TextInput 
                             ref={input => { this.textInput = input }} 
@@ -42,8 +43,9 @@ class BrowsingScreen extends Component {
                             placeholder="search" 
                         />
                     </View>
-                    <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
                 </View>
+                <Text style={styles.searchTitle}>{this.getTitle()}</Text>
+                <View style={this.state.search ? {marginVertical: 10} : {marginVertical: 0}} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
                 <View>
                     <Products products={this.state.displayItems} navigation={this.props.navigation} addToCartAction={this.props.addItemToCart}/>
                 </View>
@@ -61,27 +63,38 @@ export default connect(null, mapDispatchToProps)(BrowsingScreen);
 
 const styles = StyleSheet.create({
     container: {
-        alignItems: 'center',
+        // alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        paddingTop: 10,
+        paddingBottom: 0
+        // alignContent: 'center'
     },
     title: {
         fontSize: 20,
         fontWeight: 'bold',
+        paddingTop: 13,
+        paddingLeft: 6,
+        paddingRight: 18
     },
-    separator: {
-        marginVertical: 30,
-        height: 1,
-        width: '80%',
+    searchTitle: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        paddingTop: 30,
+        paddingBottom: 0,
+        paddingLeft: 6,
+        alignSelf: 'center'
     },
     formInput: {
         marginTop: 10,
-        width: 170,
-        height: 40,
+        width: 140,
+        height: 35,
         paddingHorizontal: 10,
         paddingVertical: 0,
         borderRadius: 50,
         backgroundColor: 'white',
         position: 'absolute',
-        right: -180,
+        right: -170,
         textAlign: 'right'
     },
 })

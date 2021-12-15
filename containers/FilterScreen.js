@@ -96,3 +96,8 @@ const styles = StyleSheet.create({
 // COLOR PALLETTE:
 // Dark bluish: rgb(45, 123, 150)
 // Main blue: rgba(129, 216, 235,.8)
+// buttons blue: rgb(49, 151, 173)
+
+// figma
+// headers: rgb(105,188,206)->complementary color rgb(67, 171, 193)->purplish for cart count rgba(105, 139, 206,.8)
+// rgb(79, 188, 227)

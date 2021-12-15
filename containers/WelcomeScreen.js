@@ -17,9 +17,6 @@ class WelcomeScreen extends Component {
                 <View style={styles.continueButton}>
                     <Button style={styles.continue} title="Continue" onPress={()=>this.props.navigation.navigate('WelcomeDefault')}/>
                 </View>
-                <View style={styles.skipButton}>
-                    <Button style={styles.skip} title="Skip" onPress={()=>this.props.navigation.navigate('WelcomeDefault')}/>
-                </View>
             </KeyboardAwareScrollView>
         );
     }
@@ -31,7 +28,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor: 'rgb(79, 188, 227)'
+        backgroundColor: 'rgb(105,188,206)'
     },
     textBox:{
         color: 'white',
@@ -41,13 +38,6 @@ const styles = StyleSheet.create({
         marginTop: 15,
     }, 
     continueButton:{
-        position: 'absolute',
-        bottom: 65,
-        right: 20,
-        backgroundColor: 'white',
-        borderRadius: 5,
-    },
-    skipButton:{
         position: 'absolute',
         bottom: 20,
         right: 20,
