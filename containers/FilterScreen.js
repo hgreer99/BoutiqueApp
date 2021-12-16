@@ -10,8 +10,8 @@ class FilterScreen extends Component {
         super(props);
         // todo: this is hardcoded instead of saved from set up
         this.state = {
-          stores: ["shopStevie.com", "lucyAvenue.com"],
-          outOfStockEnabled: true,
+          stores: ["shopStevie.com", "roolee.com"],
+          outOfStockEnabled: false,
           items: [{label: 'XS', value: 'xs'},
                     {label: 'S', value: 's'},
                     {label: 'M', value: 'm'},
@@ -23,11 +23,11 @@ class FilterScreen extends Component {
                     {label: '9', value: '9'},
                     {label: '10', value: '10'}],
           dressesOpen: false,
-          dressesValue: 'm',
+          dressesValue: 's',
           topsOpen: false,
           topsValue: 'm',
           pantsOpen: false,
-          pantsValue: 'm',
+          pantsValue: 's',
           shoesOpen: false,
           shoesValue: '8',
         };
@@ -129,7 +129,8 @@ class FilterScreen extends Component {
                             items={items}
                             setOpen={(open) => this.setDressesOpen(open)}
                             setValue={(value) => this.setDressesValue(value)}
-                            containerStyle={{height: 25, width: 70}}
+                            containerStyle={styles.dropdown}
+                            dropDownDirection="TOP"
                         />
                     </View>
                     <View style={styles.itemSizing}>
@@ -140,7 +141,8 @@ class FilterScreen extends Component {
                             items={items}
                             setOpen={(open) => this.setTopsOpen(open)}
                             setValue={(value) => this.setTopsValue(value)}
-                            containerStyle={{height: 25, width: 70}}
+                            containerStyle={styles.dropdown}
+                            dropDownDirection="TOP"
                         />
                     </View>
                     <View style={styles.itemSizing}>
@@ -151,7 +153,8 @@ class FilterScreen extends Component {
                             items={items}
                             setOpen={(open) => this.setPantsOpen(open)}
                             setValue={(value) => this.setPantsValue(value)}
-                            containerStyle={{height: 25, width: 70}}
+                            containerStyle={styles.dropdown}
+                            dropDownDirection="TOP"
                         />
                     </View>
                     <View style={styles.itemSizing}>
@@ -162,7 +165,8 @@ class FilterScreen extends Component {
                             items={shoesItems}
                             setOpen={(open) => this.setShoesOpen(open)}
                             setValue={(value) => this.setShoesValue(value)}
-                            containerStyle={{height: 25, width: 70}}
+                            containerStyle={styles.dropdown}
+                            dropDownDirection="TOP"
                         />
                     </View>
                 </View>
@@ -221,7 +225,7 @@ const styles = StyleSheet.create({
   itemSizing: {
       display: 'flex',
       flexDirection: 'row',
-      paddingVertical: 10,
+      paddingVertical: 5,
       alignSelf: 'center'
   },
   itemSizeTitle: {
@@ -229,9 +233,8 @@ const styles = StyleSheet.create({
       paddingTop: 10,
       paddingRight: 10
   },
-  picker: {
-      height: 50,
-      width: 50,
+  dropdown: {
+      width: 70
   }
 });
 

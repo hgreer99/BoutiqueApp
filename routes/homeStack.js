@@ -8,6 +8,7 @@ import ItemScreen from "../containers/ItemScreen";
 import ShoppingCartIcon from "../containers/ShoppingCartIcon";
 import WelcomeScreen from "../containers/WelcomeScreen";
 import WelcomeDefaultScreen from "../containers/WelcomeDefaultScreen";
+import WelcomeSizingScreen from "../containers/WelcomeSizingScreen";
 
 const HomeStack = createStackNavigator({
     Welcome: {
@@ -18,6 +19,12 @@ const HomeStack = createStackNavigator({
     },
     WelcomeDefault: {
         screen: WelcomeDefaultScreen,
+        navigationOptions: {
+            headerShown: false,
+        }
+    },
+    WelcomeSizing: {
+        screen: WelcomeSizingScreen,
         navigationOptions: {
             headerShown: false,
         }

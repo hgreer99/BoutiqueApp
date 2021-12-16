@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import PreferencesBoutiqueOptions from "../components/PreferencesBoutiqueOptions";
 
 class PreferenceScreen extends Component {
@@ -7,13 +8,17 @@ class PreferenceScreen extends Component {
         super(props);
         // todo: this is hardcoded instead of saved where it should be
         this.state = {
-          stores: ["shopStevie.com", "lucyAvenue.com"],
+          stores: ["shopStevie.com", "roolee.com"],
         };
     }
 
     render(){
         return (
-            <ScrollView contentContainerStyle={styles.container}>
+            <KeyboardAwareScrollView 
+                resetScrollToCoords={{ x: 0, y: 0 }}
+                contentContainerStyle={styles.container}
+                scrollEnabled={true}
+                >
                 <Text style={styles.title}>Account Info</Text>
                 <Text>This information can be configured here, or upon your first purchase.</Text>
                 <Text style={styles.title}>Preferred Shipping Address</Text>
@@ -85,15 +90,20 @@ class PreferenceScreen extends Component {
                     <PreferencesBoutiqueOptions style={styles.textBox} stores={this.state.stores}/>
                 </View>
                 <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            </ScrollView>
+            </KeyboardAwareScrollView>
         );
     }
 }
 export default PreferenceScreen;
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
+//   container: {
+//     alignItems: 'center',
+//   },
+  container:{
+    // flex: 1,
+    alignItems:'center',
+    justifyContent:'center',
   },
   title: {
     textAlign: 'center',
